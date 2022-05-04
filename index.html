@@ -1,16 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
-  <style>
-    body {
-      overflow: hidden;
-      margin: 0px;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./models/console.css">
+    <title>Portfolio</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+        }
+    </style>
 </head>
+
+    <div id="container">
+        <main class="main">
+            <p class="console">
+                <span>Social Network Terminal</span>
+                <br>
+                <span id="separator">____________________________________________</span>
+                <br>
+                <span id="caption">~/home$</span>
+                <span id="cursor"></span>
+            </p>
+        </main>
+        <footer class="footer">
+            <input type="text" id="user-caption" value="" placeholder="your command ..." />
+
+        </footer>
+    </div>
+
+    <script>
+
+        function write() {
+
+            const userText = document.getElementById("user-caption").value;
+            const inputs = document.getElementById("caption");
+
+            userText.values = ' ';
+            const printCharByChar = (input) => {
+                let count = 0;
+                let printInterval = setInterval(() => {
+                    if (input.length > count)
+                        inputs.innerText += input[count++];
+                    else
+                        clearInterval(printInterval);
+                }, 30);
+            }
+
+
+            switch(userText) {
+                case 'Github':
+                    printCharByChar("/home$ https://github.com/PaulTisserant");
+                    break;
+
+                case 'Instagram':
+                    printCharByChar("/home$ https://www.instagram.com/paul_tisserant/");
+                    break;
+
+                case 'Linkedin':
+                    printCharByChar("/home$ https://www.linkedin.com/in/paul-tisserant-a23340228/");
+                    break;
+
+                case 'help':
+                    printCharByChar("/home$ All commands enabled: Github, Instagram, Linkedin");
+                    break;
+                default :
+                    printCharByChar("Command not found: type 'help' to see all commands ");
+            }
+
+            //print characters one by one with 30ms delay
+            inputs.innerText = "";
+
+        }
+
+        /*
+        const buttonDelete = document.getElementById("test-erasing");
+
+        buttonDelete.addEventListener('click', () => {
+
+            const captions = document.getElementById("caption");
+
+            //this method delete chars with 30ms delay
+            const deleteCharByChar = (input) => {
+                let counts = input.length;
+                let printIntervals = setInterval(() => {
+                    if (counts > 0)
+                        captions.innerText = input.substring(0, counts);
+                    else
+                        clearInterval(printIntervals);
+                    counts--;
+                }, 30);
+            }
+
+            if (captions.innerText === "") {
+                deleteCharByChar("erasing test!");
+            }else {
+                //this method delete chars with 30ms delay
+                const deleteCharByChar = (input) => {
+                    let counts = input.length;
+                    let printIntervals = setInterval(() => {
+                        if (counts > 0)
+                            captions.innerText = input.substring(0, counts-1);
+                        else
+                            clearInterval(printIntervals);
+                        counts--;
+                    }, 30);
+                }
+
+                deleteCharByChar(captions.innerText);
+            }
+
+        });
+
+         */
+        document.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                write();
+            }
+        });
+    </script>
 
 <body>
 <script type="module" src="bundle.js"></script>
