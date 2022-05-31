@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Monument extended, serif;
 }
 body {
     padding: 0;
@@ -13,8 +14,8 @@ body {
     background-image: linear-gradient(to top, #000000, #151515, #232323, #323232, #414141);
 }
 #container {
-    z-index: 999;
-    background-color: black;
+    z-index: 0;
+    background-color: rgba(0,0,0,0.8);
     flex-direction: column;
     border-radius: 5px;
     overflow: hidden;
@@ -23,6 +24,16 @@ body {
     height: 360px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
+
+.exit {
+    background-color: transparent;
+    float: right;
+    color: white;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
 .console {
     margin: 0;
     color: #fff;
@@ -77,4 +88,111 @@ body {
 #separator {
     padding-bottom: 20px;
     margin-top: 10px;
+}
+
+#here {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+.progressBarContainer {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#progressBar {
+    position: absolute;
+    bottom: 50px;
+    width: 90%;
+    margin-top: 0.5%;
+    height: 7px;
+    background: black;
+}
+
+#progressBar::-moz-progress-bar {
+    background: black;
+}
+
+#progressBar::-webkit-progress-value {
+    background: black;
+}
+
+label {
+    position: absolute;
+    bottom: 70px;
+    color: white;
+    font-size: 2rem;
+}
+
+
+
+.container {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 180px;
+    height: 60px;
+    position: absolute;
+}
+
+.btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    transition: 1s ease-in-out;
+    border: none;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+.btn:hover {
+    transition: 1s ease-in-out;
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+h1  {
+    color : white;
+}
+
+.btn .btnSvg{
+    opacity: 0;
 }

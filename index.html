@@ -13,7 +13,9 @@
     </style>
 </head>
 
+
     <div id="container">
+        <button class="exit" id="exit">X</button>
         <main class="main">
             <p class="console">
                 <span>Social Network Terminal</span>
@@ -28,6 +30,26 @@
             <input type="text" id="user-caption" value="" placeholder="your command ..." />
 
         </footer>
+    </div>
+
+    <div id="here">
+
+    </div>
+
+    <div class="progressBarContainer" id="progressBarContainer">
+        <div class="container">
+            <div class="center">
+                <button class="btn" id="btn">
+                    <svg id="btnSvg" width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                    </svg>
+                    <span id="progressSpan">Enter in my world</span>
+                </button>
+            </div>
+        </div>
+        <label for="progressBar" id="progressLabel">Loading...</label>
+        <progress id="progressBar" value="0" max="100"></progress>
     </div>
 
     <script>
@@ -50,20 +72,24 @@
 
 
             switch(userText) {
-                case 'Github':
-                    printCharByChar("/home$ https://github.com/PaulTisserant");
+                case 'github':
+                    window.location.href = "https://github.com/PaulTisserant";
                     break;
 
-                case 'Instagram':
-                    printCharByChar("/home$ https://www.instagram.com/paul_tisserant/");
+                case 'instagram':
+                    window.location.href = "https://www.instagram.com/paul_tisserant/";
                     break;
 
-                case 'Linkedin':
-                    printCharByChar("/home$ https://www.linkedin.com/in/paul-tisserant-a23340228/");
+                case 'linkedin':
+                    window.location.href = "https://www.linkedin.com/in/paul-tisserant-a23340228/";
                     break;
 
                 case 'help':
-                    printCharByChar("/home$ All commands enabled: Github, Instagram, Linkedin");
+                    printCharByChar("/home$ All commands enabled: github, instagram, linkedin, quit");
+                    break;
+
+                case 'quit':
+                    document.getElementById('container').style.zIndex = "0";
                     break;
                 default :
                     printCharByChar("Command not found: type 'help' to see all commands ");
