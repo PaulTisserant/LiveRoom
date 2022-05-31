@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: Monument extended, serif;
+    font-family: 'Monument Extended', sans-serif;
 }
 body {
     padding: 0;
@@ -9,8 +9,6 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    font-family: "Lucida Sans Typewriter", "Lucida Console", Monaco,
-    "Bitstream Vera Sans Mono", monospace;
     background-image: linear-gradient(to top, #000000, #151515, #232323, #323232, #414141);
 }
 #container {
