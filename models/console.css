@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: 'Monument Extended', sans-serif;
 }
 body {
     padding: 0;
@@ -96,6 +95,7 @@ body {
 
 .progressBarContainer {
     position: absolute;
+    font-family: Monument extended, serif;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
