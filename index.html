@@ -87,7 +87,7 @@
                     break;
 
                 case 'help':
-                    printCharByChar("/home$ All commands enabled: github, instagram, linkedin, quit");
+                    printCharByChar("/home$ All commands enabled: github, instagram, linkedin");
                     break;
 
                 case 'quit':
@@ -102,49 +102,10 @@
 
         }
 
-        /*
-        const buttonDelete = document.getElementById("test-erasing");
-
-        buttonDelete.addEventListener('click', () => {
-
-            const captions = document.getElementById("caption");
-
-            //this method delete chars with 30ms delay
-            const deleteCharByChar = (input) => {
-                let counts = input.length;
-                let printIntervals = setInterval(() => {
-                    if (counts > 0)
-                        captions.innerText = input.substring(0, counts);
-                    else
-                        clearInterval(printIntervals);
-                    counts--;
-                }, 30);
-            }
-
-            if (captions.innerText === "") {
-                deleteCharByChar("erasing test!");
-            }else {
-                //this method delete chars with 30ms delay
-                const deleteCharByChar = (input) => {
-                    let counts = input.length;
-                    let printIntervals = setInterval(() => {
-                        if (counts > 0)
-                            captions.innerText = input.substring(0, counts-1);
-                        else
-                            clearInterval(printIntervals);
-                        counts--;
-                    }, 30);
-                }
-
-                deleteCharByChar(captions.innerText);
-            }
-
-        });
-
-         */
         document.addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
                 write();
+                document.getElementById('user-caption').value = "";
             }
         });
     </script>
