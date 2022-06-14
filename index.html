@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./models/console.css">
     <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
 
-    <title>Portfolio</title>
+    <title>Paul Tisserant</title>
     <style>
         body {
             overflow: hidden;
@@ -34,11 +35,31 @@
         </footer>
     </div>
 
+
+
     <div id="here">
 
     </div>
 
+
+
     <div class="progressBarContainer" id="progressBarContainer">
+        <div class="content">
+            <h3>Bienvenue sur mon portfolio</h3>
+        </div>
+        <div class="content2">
+            <p>Vous allez entrer dans un environnement qui me correspond, vous pourrez</p>
+        </div>
+
+        <div class="content4">
+           <p>interragir avec certains objets (écrans, CV, en cours ...) </p> 
+        </div>
+        
+
+        <div class="content3">
+            <p>(En cours de développement)</p>
+        </div>
+        
         <div class="container">
             <div class="center">
                 <button class="btn" id="btn">
@@ -46,7 +67,7 @@
                         <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                         <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                     </svg>
-                    <span id="progressSpan">Enter in my world</span>
+                    <span id="progressSpan">Entrer</span>
                 </button>
             </div>
         </div>
@@ -55,6 +76,8 @@
     </div>
 
     <script>
+
+        
 
         function write() {
 
@@ -71,7 +94,6 @@
                         clearInterval(printInterval);
                 }, 30);
             }
-
 
             switch(userText) {
                 case 'github':

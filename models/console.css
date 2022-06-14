@@ -98,7 +98,9 @@ body {
 
 .progressBarContainer {
     position: absolute;
-    font-family: Monument extended, serif;
+    font-family: 'Questrial';
+    font-size: 22px;
+    
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -121,11 +123,11 @@ body {
 }
 
 #progressBar::-moz-progress-bar {
-    background: black;
+    background: white;
 }
 
 #progressBar::-webkit-progress-value {
-    background: black;
+    background: white;
 }
 
 label {
@@ -156,6 +158,7 @@ label {
 }
 
 .btn {
+    display: none;
     width: 180px;
     height: 60px;
     cursor: pointer;
@@ -185,6 +188,7 @@ svg {
 }
 
 .btn span {
+    font-family: Monument extended, serif;
     color: white;
     font-size: 18px;
     font-weight: 100;
@@ -196,4 +200,60 @@ h1  {
 
 .btn .btnSvg{
     opacity: 0;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.content4 {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.content2 {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.content3 {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
